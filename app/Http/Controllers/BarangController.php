@@ -41,7 +41,6 @@ class BarangController extends Controller
     {
         //Melakukan validasi data
         $request->validate([
-            'id_barang' => 'required',
             'kode_barang' => 'required',
             'nama_barang' => 'required',
             'kategori_barang' => 'required',
@@ -91,7 +90,6 @@ class BarangController extends Controller
     public function update(Request $request, $id_barang)
     {
         $request->validate([
-            'id_barang' => 'required',
             'kode_barang' => 'required',
             'nama_barang' => 'required',
             'kategori_barang' => 'required',
