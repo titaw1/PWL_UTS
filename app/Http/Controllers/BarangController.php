@@ -18,8 +18,6 @@ class BarangController extends Controller
         $barangs = Barang::all(); // Mengambil semua isi tabel
         $posts = Barang::orderBy('id_barang', 'asc')->paginate(6);
         return view('barangs.index', compact('barangs'));
-        with('i', (request()->input('page', 1) - 1) * 5);
-    }
 
     /**
      * Show the form for creating a new resource.

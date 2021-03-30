@@ -40,8 +40,8 @@
                 <td>
                     <form action="{{ route('barang.destroy', $barang->id_barang) }}" method="POST">
 
-                        <a class="btn btn-info" href="{{ route('barang.show', $barang->barang) }}">Show</a>
-                        <a class="btn btn-primary" href="{{ route('barang.edit', $barang->Nim) }}">Edit</a>
+                        <a class="btn btn-info" href="{{ route('barang.show', $barang->id_barang) }}">Show</a>
+                        <a class="btn btn-primary" href="{{ route('barang.edit', $barang->id_barang) }}">Edit</a>
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger">Delete</button>
                     </form>
