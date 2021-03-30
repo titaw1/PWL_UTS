@@ -19,6 +19,8 @@ class BarangController extends Controller
             $barangs = Barang::where('kode_barang', 'like', "%".$request->search."%")->paginate(5);
             $barangs = Barang::where('nama_barang', 'like', "%".$request->search."%")->paginate(5);
             $barangs = Barang::where('kategori_barang', 'like', "%".$request->search."%")->paginate(5);
+            $barangs = Barang::where('harga', 'like', "%".$request->search."%")->paginate(5);
+            $barangs = Barang::where('qty', 'like', "%".$request->search."%")->paginate(5);
         } else {
             $barangs = Barang::paginate(5); // Pagination menampilkan 5 data
         }
