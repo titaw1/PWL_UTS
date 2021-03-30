@@ -16,8 +16,10 @@ class BarangController extends Controller
     {
         //fungsi eloquent menampilkan data menggunakan pagination
         $barangs = Barang::all(); // Mengambil semua isi tabel
+        $barangs = Barang::paginate(5);
         $posts = Barang::orderBy('id_barang', 'asc')->paginate(6);
         return view('barangs.index', compact('barangs'));
+    }
 
     /**
      * Show the form for creating a new resource.
