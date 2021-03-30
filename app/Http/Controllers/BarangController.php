@@ -46,7 +46,7 @@ class BarangController extends Controller
             'nama_barang' => 'required',
             'kategori_barang' => 'required',
             'harga' => 'required',
-            'Eqty' => 'required',
+            'qty' => 'required',
         ]);
 
         //fungsi eloquent untuk menambah data
@@ -96,7 +96,7 @@ class BarangController extends Controller
             'nama_barang' => 'required',
             'kategori_barang' => 'required',
             'harga' => 'required',
-            'Eqty' => 'required',
+            'qty' => 'required',
         ]);
 
        Barang::find($id_barang)->update($request->all());
