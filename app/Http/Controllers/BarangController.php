@@ -15,12 +15,12 @@ class BarangController extends Controller
     public function index(Request $request)
     {
         if($request->has('search')){ // Pemilihan jika ingin melakukan pencarian nama
-            $barangs = Barang::where('id_barang', 'like', "%".$request->search."%")->paginate(5);
-            $barangs = Barang::where('kode_barang', 'like', "%".$request->search."%")->paginate(5);
-            $barangs = Barang::where('nama_barang', 'like', "%".$request->search."%")->paginate(5);
-            $barangs = Barang::where('kategori_barang', 'like', "%".$request->search."%")->paginate(5);
-            $barangs = Barang::where('harga', 'like', "%".$request->search."%")->paginate(5);
-            $barangs = Barang::where('qty', 'like', "%".$request->search."%")->paginate(5);
+            $barangs = Barang::where('id_barang', 'like', "%".$request->search."%")
+            ->orwhere('kode_barang', 'like', "%".$request->search."%")
+            ->orwhere('nama_barang', 'like', "%".$request->search."%")
+            ->orwhere('kategori_barang', 'like', "%".$request->search."%")
+            ->orwhere('harga', 'like', "%".$request->search."%")
+            ->orwhere('qty', 'like', "%".$request->search."%")->paginate(5);
         } else {
             $barangs = Barang::paginate(5); // Pagination menampilkan 5 data
         }
