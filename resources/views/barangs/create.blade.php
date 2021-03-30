@@ -21,8 +21,7 @@
                             </ul>
                         </div>
                     @endif
-                    <form method="post" action="{{ route('barang.store') }}" id="myFo
-    rm">
+                    <form method="post" action="{{ route('barang.store') }}" id="myForm">
                         @csrf
                         <div class="form-group">
                             <label for="id_barang">id_barang</label>

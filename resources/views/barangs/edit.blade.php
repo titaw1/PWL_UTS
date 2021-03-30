@@ -7,7 +7,7 @@
         <div class="row justify-content-center align-items-center">
             <div class="card" style="width: 24rem;">
                 <div class="card-header">
-                    Edit Mahasiswa
+                    Edit Barang
                 </div>
                 <div class="card-body">
                     @if ($errors->any())
